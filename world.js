@@ -1,9 +1,10 @@
 "use strict"
 document.addEventListener("DOMContentLoaded", function(){
-    const button = document.getElementById("lookup");
+    const countryLbutton = document.getElementById("lookup");
+    const cityLbutton = document.getElementById("clookup");
     const httpRequest = new XMLHttpRequest();
 
-    button.addEventListener("click", function(e){
+    countryLbutton.addEventListener("click", function(e){
         e.preventDefault;
         const searchRequest = document.getElementById("country").value;
 
@@ -18,6 +19,25 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
         httpRequest.open('get',"http://localhost/info2180-lab5/world.php?country="+searchRequest, true);
-        httpRequest.send()
+        httpRequest.send();
     });
+
+    cityLbutton.addEventListener("click", function(e){
+        e.preventDefault;
+        const searchRequest = document.getElementById("country").value;
+        var url = "http://localhost/info2180-lab5/world.php?country="+searchRequest+"&context=cities";
+        httpRequest.onreadystatechange = function(){
+            if (httpRequest.readyState == 4 && httpRequest.status == 200){
+                if (searchRequest.length !==0){
+                    document.getElementById('result').innerHTML = httpRequest.responseText;
+                } else {
+                    document.getElementById('result').innerHTML = httpRequest.responseText;
+                }
+            }
+        }
+
+        httpRequest.open('get',url , true);
+        httpRequest.send();
+    });
+
 });
