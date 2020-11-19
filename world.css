@@ -1,1 +1,102 @@
 /* Add your own styles */
+html{
+    margin:0;
+    padding:0;
+}
+
+header{
+    margin-top: -4px;
+    font-size: 30px;
+    justify-content: center;
+    padding: 10px;
+    background-color: aquamarine;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+body{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    min-height: 100vh;
+    background-color: rgb(196, 186, 176);
+}
+
+main{
+    padding:30px;
+}
+
+container{
+    text-align: center;
+}
+
+label{
+    font-size: 18px;
+}
+
+input{
+    height:50px;
+    width: 700px;
+    padding: 15px;
+    border: 1px solid rgb(124, 124, 124);
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    border-radius: 5px;
+    outline-style:none;
+    border-style: none;
+}
+
+#result{
+    padding:30px;
+}
+
+button{
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    border-style: none;
+    outline-style: none;
+    background-color: aquamarine;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: antiquewhite;
+}
+
+#controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttons{
+    padding-top: 20px;
+}
+
+table{
+    font-size: 18px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+table tr:hover{
+    background-color: #ddd;
+}
+
+table th{
+    padding-top: 12px;
+    padding-bottom:12px;
+    text-align: center;
+    background-color: aquamarine;
+    color: white;
+}

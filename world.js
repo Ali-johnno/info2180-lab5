@@ -10,11 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         httpRequest.onreadystatechange = function(){
             if (httpRequest.readyState == 4 && httpRequest.status == 200){
-                if (searchRequest.length !==0){
-                    document.getElementById('result').innerHTML = httpRequest.responseText;
-                } else {
-                    document.getElementById('result').innerHTML = httpRequest.responseText;
-                }
+             document.getElementById('result').innerHTML = httpRequest.responseText;
             }
         }
 
@@ -28,11 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
         var url = "http://localhost/info2180-lab5/world.php?country="+searchRequest+"&context=cities";
         httpRequest.onreadystatechange = function(){
             if (httpRequest.readyState == 4 && httpRequest.status == 200){
-                if (searchRequest.length !==0){
-                    document.getElementById('result').innerHTML = httpRequest.responseText;
-                } else {
-                    document.getElementById('result').innerHTML = httpRequest.responseText;
-                }
+                document.getElementById('result').innerHTML = httpRequest.responseText;
             }
         }
 
